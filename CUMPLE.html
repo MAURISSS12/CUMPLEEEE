@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #a70fcd;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FF4500;
+        }
+
+        .mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            display: none;
+        }
+
+        /* Estilos para la foto personal */
+        .foto {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Feliz Cumpleaños!</h1>
+    <p>Ingresa tu nombre para ver un mensaje especial de cumpleaños:</p>
+
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <button onclick="mostrarMensaje()">Felicitar</button>
+
+    <div id="mensaje" class="mensaje">
+        <p id="mensajeCumpleaños"></p>
+    </div>
+
+    <!-- Foto personal -->
+    <img class="foto" src="cumple/FATIMA.jpg" alt="Foto Personal" />
+
+    <script>
+        function mostrarMensaje() {
+            var nombre = document.getElementById('nombre').value;
+
+            if (nombre === "") {
+                alert("Por favor, ingresa un nombre.");
+                return;
+            }
+
+            var mensaje = `
+                ¡Feliz cumpleaños, ${nombre}!<br><br>
+                Hoy es un día muy especial, y el mejor día de cada año.<br>
+                Eres una persona increíble, única y maravillosa. Desde que te conocí, me di cuenta de que no hay nadie como tú en este mundo.<br><br>
+                
+                Te admiro muchísimo, eres fuerte, valiente y siempre tienes una sonrisa que transmite lo que es la felicidad.<br><br>
+                
+                Quiero que sepas que siempre estaré a tu lado, en las buenas y en las malas. <br>
+                Siempre puedes contar conmigo, hoy y siempre. Siempre voy a estar para ti. Tú me enseñaste muchas cosas que siempre 
+                traigo en mi mente y corazón.<br><br>
+                
+                No iba a dejar pasar este día, me emociona mucho cuando es tu cumpleaños, desde que se acerca me da mucha felicidad.<br>
+                De verdad espero algún día volverte a ver y que me des la oportunidad de entregarte la sorpresa por la cual 
+                me he esforzado todos los días, buscando vender mucho para poder hacerte una sorpresa. Espero y así lo sea.<br><br>
+                
+                ¡Te quiero mucho y te deseo un día lleno de felicidad!<br>
+                Gracias por ser como eres y por hacer que el mundo sea mejor solo con tu existencia.<br><br>
+
+                ERES LA MEJOR PERSONA DEL MUNDO Y DE MI MUNDO, SIEMPRE SERÉ TU FANNNNN!!!!<br>
+                ¡Feliz cumpleaños, la mejor de todas!<br><br>
+
+                <b>ATT. MAUSITO :)</b>
+            `;
+
+            document.getElementById('mensajeCumpleaños').innerHTML = mensaje;
+            document.getElementById('mensaje').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
